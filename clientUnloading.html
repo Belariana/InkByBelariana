@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.svg" type="image/svg">
+    <title>Как самостоятельно выгрузить набор эмодзи</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Меню -->
+    <div id="header-placeholder"></div>
+
+    <main class="article-page">
+
+        <header class="article-header">
+            <div class="container">
+                <div class="article-header__content">
+                    <a href="magazine.html" class="back-link">
+                        <lottie-player 
+                        src="images/arrowBack.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 24px; height: 24px;" 
+                        loop 
+                        autoplay>
+                        </lottie-player>
+                        <span>вернуться к статьям</span>
+                    </a>
+                    <h1>Как самостоятельно выгрузить набор эмодзи</h1>
+                </div>
+                <div class="article-header__visual">
+                    <img src="images/sourcesInfoMini.png" alt="Обложка статьи">
+                </div>
+            </div>
+        </header>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-content">
+                    <p>Для работы с наборами используется официальный бот <a href="https://t.me/Stickers" target="_blank" rel="noopener noreferrer">@Stickers</a>. Он доступен в формате мини-приложения (Mini App) и через текстовые команды.</p>
+
+                    <div class="important-note">
+                        <h4>Важно!</h4>
+                        <p>После обновления в сентябре 2025 года в мини-приложении могут возникать ошибки. Поэтому для надёжности лучше использовать текстовые команды, особенно при загрузке анимированных и видео-эмодзи.</p>
+                    </div>
+
+                    <p>Далее полная инструкция по созданию и управлению наборами эмодзи для Telegram.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="step-section">
+            <div class="container">
+                <header class="step-header">
+                    <span class="step-tag">Шаг 1</span>
+                    <h2>Создаём новый набор</h2>
+                </header>
+
+                <div class="step-methods">
+                    <div class="method-card">
+                        <div class="method-content">
+                            <h3 class="method-title">Способ 1 — через Mini App</h3>
+                            <ol class="method-steps">
+                                <li>Откройте бот <a href="https://t.me/Stickers" target="_blank" rel="noopener noreferrer">@Stickers</a> как мини-приложение.</li>
+                                <li>Перейдите во вкладку «Эмодзи».</li>
+                                <li>Нажмите «Создать набор».</li>
+                                <li>Введите название набора (можно использовать любой язык, пробелы и эмодзи).</li>
+                                <li>Загрузите один файл (эмодзи или стикер) и нажмите «Создать».</li>
+                            </ol>
+                            <p class="method-summary">Набор создан, но ещё не опубликован.</p>
+                        </div>
+                        <div class="method-visual">
+                            <video autoplay loop muted playsinline><source src="images/appsOne.mp4" type="video/mp4"></video>
+                        </div>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-content">
+                            <h3 class="method-title">Способ 2 — через команды</h3>
+                            <ol class="method-steps">
+                                <li>Пишем боту команду: <code>/newemojipack</code> — для создания набора эмодзи.</li>
+                                <li>Выберите формат: статичный, анимированный или видео.</li>
+                                <li>Вводим название набора (любой язык, пробелы, ссылки — разрешены).</li>
+                                <li>Загружаем один элемент → жмём «Создать».</li>
+                            </ol>
+                            <p class="method-summary">Набор создан, но ещё не опубликован.</p>
+                        </div>
+                        <div class="method-visual">
+                            <video autoplay loop muted playsinline><source src="images/comandOne.mp4" type="video/mp4"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="step-section">
+            <div class="container">
+                <header class="step-header">
+                    <span class="step-tag">Шаг 2</span>
+                    <h2>Загружаем элементы</h2>
+                </header>
+
+                <p class="step-intro">Перед загрузкой важно понимать, какой у вас тип эмодзи — статичные, анимированные или видео. От этого зависит способ выгрузки.</p>
+
+                <div class="step-methods">
+                    <div class="method-card">
+                        <div class="method-content">
+                            <h3 class="method-title">Статичные эмодзи</h3>
+                            <p class="method-description">Проще всего загружать через мини-приложение:</p>
+                            <ol class="method-steps">
+                                <li>Откройте мини-приложение и выберите созданный набор.</li>
+                                <li>Нажмите «Добавить эмодзи».</li>
+                                <li>Загрузите все файлы по очереди.</li>
+                                <li>Для каждого файла подберите соответствующий стандартный эмодзи.</li>
+                            </ol>
+                        </div>
+                        <div class="method-visual">
+                            <video autoplay loop muted playsinline><source src="images/appsTwo.mp4" type="video/mp4"></video>
+                        </div>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-content">
+                            <h3 class="method-title">Анимированные и видео-эмодзи</h3>
+                            <p class="method-description">Через мини-приложение они пока не загружаются (баги). Рабочий способ только один — через команды.</p>
+                            <ol class="method-steps">
+                                <li>Отправьте команду <code>/addemoji</code>.</li>
+                                <li>Выберите из списка нужный набор.</li>
+                                <li>Отправляйте файлы по одному.</li>
+                                <li>После загрузки каждого файла бот попросит привязать к нему стандартный эмодзи. Отправьте его в ответ.</li>
+                                <li>Повторяйте, пока не загрузите все файлы.</li>
+                            </ol>
+                        </div>
+                        <div class="method-visual">
+                            <video autoplay loop muted playsinline><source src="images/comandTwo.mp4" type="video/mp4"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="step-section">
+            <div class="container">
+                <header class="step-header">
+                    <span class="step-tag">Шаг 3</span>
+                    <h2>Публикация набора</h2>
+                </header>
+
+                <div class="info-content">
+                    <p>Перед публикацией Телеграм попросит ввести второе имя для набора — то самое, по которому будет формироваться ссылка. После этого набор станет доступен по ссылке.</p>
+
+                    <div class="important-note">
+                        <h4>Правила:</h4>
+                        <p>Только латинские буквы, цифры и знаки подчёркивания. Пробелы запрещены. Имя должно быть уникальным.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="step-section">
+            <div class="container">
+                <header class="step-header">
+                    <span class="step-tag">Шаг 4</span>
+                    <h2>Редактирование набора</h2>
+                </header>
+
+                <p class="step-intro">Удалять и менять порядок элементов можно в любой момент.</p>
+
+                <div class="step-methods">
+                    <div class="method-card">
+                        <div class="method-content">
+                            <h3 class="method-title">Способ 1 — через Mini App</h3>
+                            <div class="custom-list">
+                                <div class="custom-list-item">
+                                    <h4>Удаление элемента:</h4>
+                                    <p>нажмите на нужный эмодзи → «Удалить».</p>
+                                </div>
+                                <div class="custom-list-item">
+                                    <h4>Изменение порядка:</h4>
+                                    <p>зажмите элемент мышью и перетащите на нужное место.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="method-visual">
+                            <video autoplay loop muted playsinline><source src="images/appsThree.mp4" type="video/mp4"></video>
+                        </div>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-content">
+                            <h3 class="method-title">Способ 2 — через команды</h3>
+                            <div class="custom-list">
+                                <div class="custom-list-item">
+                                    <h4>Удаление элемента:</h4>
+                                    <p>отправьте <code>/delemoji</code>, выберите набор и файл для удаления.</p>
+                                </div>
+                                <div class="custom-list-item">
+                                    <h4>Изменение порядка:</h4>
+                                    <p>отправьте <code>/orderemoji</code>, выберите набор, а затем в открывшемся интерфейсе перетащите элементы в нужном порядке.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="method-visual">
+                            <video autoplay loop muted playsinline><source src="images/comandThree.mp4" type="video/mp4"></video>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <div class="info-content">
+                    <h3>Не хотите разбираться в деталях?</h3>
+                    <p>Если процесс кажется сложным или у вас просто нет на это времени, вы всегда можете заказать набор у профессионального дизайнера. Он не только создаст качественные эмодзи по вашему ТЗ, но и возьмёт на себя все технические моменты, связанные с подготовкой и загрузкой набора в Telegram.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Раздел Призыв к действию -->
+    <div id="cta-placeholder"></div>
+    <!-- Раздел Подвал -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="js/portfolio-data.js"></script>
+    <script src="js/forMagazine.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+</body>
