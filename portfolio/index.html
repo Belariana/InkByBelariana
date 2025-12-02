@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/logo.svg" type="image/svg">
+    <title>Мои работы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   
+<!-- Шапка сайта -->
+  <div id="header-placeholder"></div>
+
+  <main class="container">
+    <div class="menu"></div>
+
+    <section class="about-card">
+      <div class="about-card__header">
+        <img src="/images/ArinaPalatkina.png" alt="Графический дизайнер для социальных сетей" class="about-card__avatar">
+        <div class="about-card__info">
+          <h2 class="about-card__title">Привет! Меня зовут Арина Палаткина</h2>
+          <p class="about-card__description">Я дизайнер и создаю визуальное оформление для соцсетей: от постов и сторис до цельного стиля вашего бренда. Я верю, что именно детали делают проект живым, поэтому моя особая страсть – разработка уникальных эмодзи.</p>
+        </div>
+      </div>
+
+      <div class="about-card__quote">
+        <p>Эмодзи – это важная часть визуальной системы, которая помогает выделиться и говорить с аудиторией на одном языке.</p>
+        <lottie-player 
+          src="/images/clip.json"
+          background="transparent" 
+          speed="1" 
+          class="about-card__clip"
+          loop 
+          autoplay>
+        </lottie-player>
+      </div>
+
+      <div class="about-card__actions">
+        <a href="https://t.me/InkByBelariana" target="_blank" class="about-card__button about-card__button--primary">
+          <svg class="about-card__button-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">>
+            <path d="M11.95,5.06l1.94-2.63c4.13-4.54,10.69-1.09,9.65,4.9-.53,3.03-3.1,6.15-4.97,8.54-2.09,2.67-4.36,5.23-6.56,7.81-1.92-2.32-3.93-4.58-5.81-6.94C3.34,13.16-1.69,7.71,1.23,2.9,4.2-2.02,10.07.86,11.95,5.06Z"/>
+          </svg>
+          <span>сразу перейти на канал с эмодзи</span>
+        </a>
+        <a href="/design-social-media/" class="about-card__button about-card__button--secondary">
+          мне интересно полное оформление соцсетей
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <main class="container">
+    
+    <section class="sets-gallery">
+        
+      <h2 class="sets-title">Примеры наборов</h2>
+
+      <div class="filter-buttons" role="group" aria-label="Фильтры наборов">
+        <button class="filter-btn active" data-filter="all">все</button> 
+        <button class="filter-btn" data-filter="animated">анимированный</button>
+        <button class="filter-btn" data-filter="static">статичный</button>
+        <button class="filter-btn" data-filter="hq">высокое качество</button>
+        <button class="filter-btn" data-filter="lq">низкое качество</button>
+        <button class="filter-btn" data-filter="business">для бизнеса</button>
+        <button class="filter-btn" data-filter="fandom">для фандома</button>
+        <button class="filter-btn" data-filter="expert">для эксперта</button>
+         <button class="filter-btn" data-filter="topic">тематический</button>
+      </div>
+
+      <div class="sets-grid">
+
+            <!-- Карточка 1 -->
+            <article class="set-card" data-tags="static lq topic">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Ночная вьюга</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <img src="/images/winter1.png" alt="Зимний эмодзи набор для телеграма установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/winter2.png" alt="Зимний эмодзи набор для телеграма установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/winter3.png" alt="Зимний эмодзи набор для телеграма установить">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/143" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 2 -->
+            <article class="set-card" data-tags="animated hq fandom">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Заколдованный снимок</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/keyHarry.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма в стиле Гарри Поттера установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/timesHarry.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма в стиле Гарри Поттера установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/DeathlyHallows.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма в стиле Гарри Поттера установить"></lottie-player>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/132" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 3 -->
+            <article class="set-card" data-tags="static lq fandom">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Cookie Run</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <img src="/images/cookie1.png" alt="Эмодзи набор для телеграма по игре Cookie Run установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/cookie2.png" alt="Эмодзи набор для телеграма по игре Cookie Run установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/cookie3.png" alt="Эмодзи набор для телеграма по игре Cookie Run установить">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/129" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+             <!-- Карточка 4 -->
+            <article class="set-card" data-tags="animated hq business">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Дышите свободно</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/target.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для бизнеса установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/logoSmoke.json" background="transparent" speed="1" loop autoplay alt="Анимированный лого для телеграма для бизнеса установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/fire.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для бизнеса установить"></lottie-player>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/128" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 5 -->
+            <article class="set-card" data-tags="animated hq topic">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Корона осени</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/catsmem.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма в осеннем стиле установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/mail.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма в осеннем стиле установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/radio.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма в осеннем стиле установить"></lottie-player>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/127" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 6 -->
+            <article class="set-card" data-tags="animated hq expert">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Ростова: для писателей</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/space.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для писателя установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/rostova2.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для писателя установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/rostova3.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для писателя установить"></lottie-player>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/125" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 7 -->
+            <article class="set-card" data-tags="animated hq expert">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">ЮристКонсульт</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/JusticeLawyer.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для эксперта установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/CourtLawyer.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для эксперта установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/HammerLawyer.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для эксперта установить"></lottie-player>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/120" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 8 -->
+            <article class="set-card" data-tags="animated hq expert">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Терапия души</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/therapy2.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для терапевта установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/therapy1.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для терапевта установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                          <lottie-player src="/images/therapy3.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма для терапевта установить"></lottie-player>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/119" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 9 -->
+            <article class="set-card" data-tags="static lq topic">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Буквы красной луны</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <img src="/images/redletters1.png" alt="Эмодзи набор для телеграма в японско-китайском стиле установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/redletters2.png" alt="Эмодзи набор для телеграма в японско-китайском стиле установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/redletters3.png" alt="Эмодзи набор для телеграма в японско-китайском стиле установить">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/93" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 10 -->
+            <article class="set-card" data-tags="static lq fandom">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Сумеречная жажда</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <img src="/images/twilight1.png" alt="Эмодзи набор для телеграма Сумерки установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/twilight2.png" alt="Эмодзи набор для телеграма Сумерки установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/twilight3.png" alt="Эмодзи набор для телеграма Сумерки установить">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/91" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+
+            <!-- Карточка 11 -->
+            <article class="set-card" data-tags="static lq expert">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Терапия души</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <img src="/images/therapy1.png" alt="Эмодзи набор для телеграма для терапевта установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/therapy2.png" alt="Эмодзи набор для телеграма для терапевта установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/therapy3.png" alt="Эмодзи набор для телеграма для терапевта установить">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/29" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 12 -->
+            <article class="set-card" data-tags="static lq topic">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Шёпоты сакуры</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <img src="/images/whisper1.png" alt="Эмодзи набор для телеграма в японско-китайском стиле установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/whisper2.png" alt="Эмодзи набор для телеграма в японско-китайском стиле установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/whisper3.png" alt="Эмодзи набор для телеграма в японско-китайском стиле установить">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/96" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 13 -->
+            <article class="set-card" data-tags="static lq business">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Транспортное бюро</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <img src="/images/lic1.png" alt="Эмодзи набор для телеграма для транспортной компании установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/lic2.png" alt="Эмодзи набор для телеграма для транспортной компании установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                          <img src="/images/lic3.png" alt="Эмодзи набор для телеграма для транспортной компании установить">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/27" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+            <!-- Карточка 14 -->
+            <article class="set-card" data-tags="static lq expert">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Фототерапия</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                          <img src="/images/photo1.png" alt="Эмодзи набор для телеграма для фотографа установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                           <img src="/images/photo2.png" alt="Эмодзи набор для телеграма для фотографа установить">
+                        </div>
+                        <div class="set-card__preview-item">
+                           <img src="/images/photo3.png" alt="Эмодзи набор для телеграма для фотографа установить">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/52" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+             <!-- Карточка 15 -->
+            <article class="set-card" data-tags="animated hq topic">
+                <div class="set-card__content">
+                    <h3 class="set-card__title">Шрифт из ада</h3>
+                    <div class="set-card__previews">
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/hell1.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма на Хеллоуин установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/hell2.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма на Хеллоуин установить"></lottie-player>
+                        </div>
+                        <div class="set-card__preview-item">
+                           <lottie-player src="/images/hell3.json" background="transparent" speed="1" loop autoplay alt="Анимированный эмодзи для телеграма на Хеллоуин установить"></lottie-player>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://t.me/InkByBelariana/135" target="_blank" class="set-card__button">Установить набор</a>
+            </article>
+
+      </div>
+    </section>
+  </main>
+
+  <main class="container">
+    <section class="special-idea">
+      <h2 class="special-idea__title">У вас особенная идея?</h2>
+      <p class="special-idea__text">
+          В любом случае напишите мне. Я открыта к нестандартным задачам и всегда помогу найти лучшее решение. Если для реализации вашей задумки потребуется особый стиль (например, псевдо-3D или сложная иллюстрация), я привлеку проверенного специалиста, и мы вместе доведём проект до идеального результата.
+      </p>
+    </section>
+  </main>
+
+<!-- Раздел Призыв к действию -->
+  <div id="cta-placeholder"></div>
+<!-- Раздел Подвал -->
+  <div id="footer-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</body>
+</html>
