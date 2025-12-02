@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log('DOM готов. Запускаю скрипты...');
 
+  // 1. УНИВЕРСАЛЬНАЯ ФУНКЦИЯ ДЛЯ ЗАГРУЗКИ HTML-БЛОКОВ
+  // ===================================================================
+
   function loadComponent(placeholderId, filePath) {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder) {
@@ -54,11 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadComponent('header-placeholder', '/header.html');
   loadComponent('footer-placeholder', '/footer.html');
-
+;
 
   // ===================================================================
   // 3. АНИМАЦИЯ БЛОКОВ ПРИ ПРОКРУТКЕ
   // ===================================================================
+
 
   const animatedBlocks = document.querySelectorAll('.animated-block');
 
@@ -102,11 +106,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+    // --- 3. ЗАГРУЗКА И ВСТАВКА РАЗДЕЛА ЗАКАЗАТЬ НАБОР (новый код) ---
+  const pricePlaceholder = document.getElementById('price-placeholder');
+
+  // Если на странице есть заглушка для подвала
+  if (pricePlaceholder) {
+    fetch('/price.html') 
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text(); 
+      })
+      .then(data => {
+        pricePlaceholder.innerHTML = data; 
+      })
+      .catch(error => {
+        console.error('Ошибка при загрузке подвала:', error);
+        pricePlaceholder.innerHTML = '<p style="color: red; text-align: center;">Не удалось загрузить подвал.</p>';
+      });
+  }
+
+
 
 }); 
-
-
-
-
-
 
