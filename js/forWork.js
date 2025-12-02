@@ -3,15 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log('DOM готов. Запускаю скрипты...');
 
-  // ===================================================================
-  // 1. УНИВЕРСАЛЬНАЯ ФУНКЦИЯ ДЛЯ ЗАГРУЗКИ HTML-БЛОКОВ
-  // ===================================================================
-
-  // Эта функция загружает HTML из файла и вставляет его в указанный placeholder
   function loadComponent(placeholderId, filePath) {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder) {
-      // Если на странице нет такого блока, просто выходим
       return; 
     }
 
@@ -23,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         placeholder.innerHTML = data;
 
-        // ВАЖНО: Если мы только что загрузили хедер, нужно сразу же инициализировать меню
         if (placeholderId === 'header-placeholder') {
           initializeMobileMenu();
         }
@@ -34,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // Функция для инициализации логики мобильного меню
+
   function initializeMobileMenu() {
     const hamburger = document.querySelector('.hamburger-menu');
     const mainNav = document.querySelector('.main-nav');
@@ -59,10 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. ЗАГРУЗКА ВСЕХ НЕОБХОДИМЫХ БЛОКОВ
   // ===================================================================
 
-  loadComponent('header-placeholder', '../header.html');
-  loadComponent('footer-placeholder', '../footer.html');
-  // Добавьте сюда другие блоки, если они появятся, например:
-  // loadComponent('reviews-placeholder', './_reviews.html');
+  loadComponent('header-placeholder', './header.html');
+  loadComponent('footer-placeholder', './footer.html');
+
 
   // ===================================================================
   // 3. АНИМАЦИЯ БЛОКОВ ПРИ ПРОКРУТКЕ
@@ -70,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const animatedBlocks = document.querySelectorAll('.animated-block');
 
-  // Запускаем код анимации, только если на странице есть такие блоки
   if (animatedBlocks.length > 0) {
     console.log(`Найдено анимированных блоков: ${animatedBlocks.length}. Запускаю IntersectionObserver.`);
 
@@ -78,11 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // Отключаем наблюдение после анимации
+          observer.unobserve(entry.target); 
         }
       });
     }, {
-      threshold: 0.1 // Срабатывание при появлении на 10%
+      threshold: 0.1 /
     });
 
     animatedBlocks.forEach(block => {
@@ -93,15 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // --- 3. ЗАГРУЗКА И ВСТАВКА РАЗДЕЛА ЗАКАЗАТЬ НАБОР (новый код) ---
   const ctaPlaceholder = document.getElementById('cta-placeholder');
 
-  // Если на странице есть заглушка для подвала
+ 
   if (ctaPlaceholder) {
-    fetch('../cta.html') // Загружаем содержимое файла _cta.html
+    fetch('./cta.html') 
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
-        return response.text(); // Преобразуем ответ в текст
+        return response.text(); 
       })
       .then(data => {
-        ctaPlaceholder.innerHTML = data; // Вставляем HTML подвала в заглушку
+        ctaPlaceholder.innerHTML = data; 
       })
       .catch(error => {
         console.error('Ошибка при загрузке подвала:', error);
@@ -112,7 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-}); // <-- Конец обработчика DOMContentLoaded
+}); 
+
 
 
 
