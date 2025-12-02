@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const headerPlaceholder = document.getElementById('header-placeholder');
 
   if (headerPlaceholder) {
-    fetch('/_header.html')
+    fetch('/header.html')
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text();
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   if (footerPlaceholder) {
-    fetch('/_footer.html') 
+    fetch('/footer.html') 
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text(); 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   if (ctaPlaceholder) {
-    fetch('/_cta.html') 
+    fetch('/cta.html') 
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text(); 
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pricePlaceholder = document.getElementById('price-placeholder');
 
   if (pricePlaceholder) {
-    fetch('/_price.html') 
+    fetch('/price.html') 
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text(); 
@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
 
 
 
