@@ -2397,9 +2397,10 @@ a:hover {
 }
 
 .method-steps code {
-  background-color: var(--text-color);
+  background-color: var(--background-color);
   padding: 2px 6px;
   border-radius: 4px;
+  color: var(--primary-color);
 }
 
 .method-summary {
@@ -3231,4 +3232,5 @@ e
       .page-title {font-size: 20px; margin: 40px 0 20px;}
       .content { font-size: 10px;}
     }
+
 
