@@ -9,28 +9,33 @@ document.addEventListener('DOMContentLoaded', () => {
   function loadComponent(placeholderId, filePath) {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder) {
-      return; 
+      console.warn(`Плейсхолдер с ID "${placeholderId}" не найден.`);
+      return;
     }
 
     fetch(filePath)
       .then(response => {
+        // ИСПРАВЛЕНО: Строка обернута в обратные кавычки
         if (!response.ok) throw new Error(`Не удалось загрузить файл: ${filePath}`);
         return response.text();
       })
       .then(data => {
         placeholder.innerHTML = data;
 
+        // Инициализируем мобильное меню только после загрузки хедера
         if (placeholderId === 'header-placeholder') {
           initializeMobileMenu();
         }
       })
       .catch(error => {
+        // ИСПРАВЛЕНО: Строка обернута в обратные кавычки
         console.error(`Ошибка при загрузке компонента (${placeholderId}):`, error);
-        placeholder.innerHTML = `<p style="color: red; text-align: center;">Не удалось загрузить блок.</p>`;
+        // ИСПРАВЛЕНО: HTML обернут в одинарные кавычки
+        placeholder.innerHTML = '<p style="color: red; text-align: center;">Не удалось загрузить блок.</p>';
       });
   }
 
-
+  // Функция для инициализации мобильного меню (вызывается после загрузки хедера)
   function initializeMobileMenu() {
     const hamburger = document.querySelector('.hamburger-menu');
     const mainNav = document.querySelector('.main-nav');
@@ -55,77 +60,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. ЗАГРУЗКА ВСЕХ НЕОБХОДИМЫХ БЛОКОВ
   // ===================================================================
 
+  // УЛУЧШЕНО: Используем единую функцию для всех блоков
   loadComponent('header-placeholder', '/header.html');
   loadComponent('footer-placeholder', '/footer.html');
-;
+  loadComponent('cta-placeholder', '/cta.html');
+  loadComponent('price-placeholder', '/price.html');
 
   // ===================================================================
   // 3. АНИМАЦИЯ БЛОКОВ ПРИ ПРОКРУТКЕ
   // ===================================================================
 
-
   const animatedBlocks = document.querySelectorAll('.animated-block');
 
   if (animatedBlocks.length > 0) {
+    // ИСПРАВЛЕНО: Строка обернута в обратные кавычки
     console.log(`Найдено анимированных блоков: ${animatedBlocks.length}. Запускаю IntersectionObserver.`);
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1 /
+      // ИСПРАВЛЕНО: Убран лишний символ "/"
+      threshold: 0.1
     });
 
     animatedBlocks.forEach(block => {
       observer.observe(block);
     });
   }
-
-      // --- 3. ЗАГРУЗКА И ВСТАВКА РАЗДЕЛА ЗАКАЗАТЬ НАБОР (новый код) ---
-  const ctaPlaceholder = document.getElementById('cta-placeholder');
-
- 
-  if (ctaPlaceholder) {
-    fetch('/cta.html') 
-      .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.text(); 
-      })
-      .then(data => {
-        ctaPlaceholder.innerHTML = data; 
-      })
-      .catch(error => {
-        console.error('Ошибка при загрузке подвала:', error);
-        ctaPlaceholder.innerHTML = '<p style="color: red; text-align: center;">Не удалось загрузить подвал.</p>';
-      });
-  }
-
-
-
-    // --- 3. ЗАГРУЗКА И ВСТАВКА РАЗДЕЛА ЗАКАЗАТЬ НАБОР (новый код) ---
-  const pricePlaceholder = document.getElementById('price-placeholder');
-
-  // Если на странице есть заглушка для подвала
-  if (pricePlaceholder) {
-    fetch('/price.html') 
-      .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.text(); 
-      })
-      .then(data => {
-        pricePlaceholder.innerHTML = data; 
-      })
-      .catch(error => {
-        console.error('Ошибка при загрузке подвала:', error);
-        pricePlaceholder.innerHTML = '<p style="color: red; text-align: center;">Не удалось загрузить подвал.</p>';
-      });
-  }
-
-
-
-}); 
-
+});
