@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadComponent('header-placeholder', '/header.html');
   loadComponent('footer-placeholder', '/footer.html');
   loadComponent('cta-placeholder', '/cta.html');
-  loadComponent('price-placeholder', '/price.html');
+
 
   // ===================================================================
   // 3. АНИМАЦИЯ БЛОКОВ ПРИ ПРОКРУТКЕ
@@ -93,3 +93,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
