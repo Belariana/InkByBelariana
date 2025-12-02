@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. ЗАГРУЗКА ВСЕХ НЕОБХОДИМЫХ БЛОКОВ
   // ===================================================================
 
-  loadComponent('header-placeholder', './_header.html');
-  loadComponent('footer-placeholder', './_footer.html');
+  loadComponent('header-placeholder', '/_header.html');
+  loadComponent('footer-placeholder', '/_footer.html');
   // Добавьте сюда другие блоки, если они появятся, например:
   // loadComponent('reviews-placeholder', './_reviews.html');
 
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Если на странице есть заглушка для подвала
   if (ctaPlaceholder) {
-    fetch('./_cta.html') // Загружаем содержимое файла _cta.html
+    fetch('/_cta.html') // Загружаем содержимое файла _cta.html
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text(); // Преобразуем ответ в текст
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Если на странице есть заглушка для подвала
   if (pricePlaceholder) {
-    fetch('./_price.html') // Загружаем содержимое файла _price.html
+    fetch('/_price.html') // Загружаем содержимое файла _price.html
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text(); // Преобразуем ответ в текст
